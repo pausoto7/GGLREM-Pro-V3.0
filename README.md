@@ -9,7 +9,7 @@ Originally developed by **Matt Helstab and Paul Powers**, this tool helps identi
 ## Requirements
 
 - **ArcGIS Pro** with Spatial Analyst extension  
-- GGLREM Pro toolbox (Helstab & Hornby, 2024)  
+- GGLREM ArcPy toolbox 
 - Basic knowledge of:
   - ArcGIS Pro (Catalog, Toolbox, Editor tools)
   - Microsoft Excel
@@ -23,31 +23,30 @@ Originally developed by **Matt Helstab and Paul Powers**, this tool helps identi
 
 ## Input Data
 
-- High-resolution **DEM** (preferably LiDAR-derived) clipped to the river corridor
-- Clean DEMs: remove outliers/negatives, especially for tidal areas
+- Clean, high-resolution **DEM** clipped to the river corridor
 
 ---
 
 ## Workflow Summary
 
-1. **Set up directories**:
+**Set up directories**:
    - Create a project folder, geodatabase, and import DEM
 
-2. **Step 1 – Create Centerline**:
+**Step 1 – Create Centerline**:
    - Use `Create a Centerline Feature Class` tool
    - Digitize centerline approximating the floodplain center
    - Set `RouteID` (e.g., `Tranquille_Fan`) and save
 
-3. **Step 2 – Cross-Sections**:
+**Step 2 – Cross-Sections**:
    - Use `Create Cross-Sections and Routed Centerline`
    - Define spacing and buffer
    - Outputs: Routed centerline and cross-sections
 
-4. **Step 3 – GGL Table**:
+**Step 3 – GGL Table**:
    - Use `Create GGL Table and Centerline Stations`
    - Outputs: CSV with fitted elevation data for REM development
 
-5. **Step 4 – Generate REM**:
+**Step 4 – Generate REM**:
    - Open output CSV and follow instructions to build REM using provided tools
 
 ---
@@ -66,6 +65,6 @@ Originally developed by **Matt Helstab and Paul Powers**, this tool helps identi
 ## 📜 Credits
 
 Developed by **Matt Helstab** and **Paul Powers**  
-Source code and documentation: [GGLREM GitHub Repository](https://github.com/helstab/GGLREM)
+Source code: [GGLREM GitHub Repository](https://github.com/helstab/GGLREM)
 
 ---
